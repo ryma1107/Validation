@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <form #MonForm="ngForm">
+
+        <label for="MyMail">Email</label>
+        <input type="email" email required ngModel id="MyMail" name="MyMail" class="form-control">
+
+        <label for="MyPassword">Mot de passe</label>
+        <input type="password" password required ngModel id="MyPassword" name="MyPassword" class="form-control">
+
+      </form>
+
+      <button name="envoyer" (click)="processForm(MonForm)" [disabled]="MonForm.invalid" class="btn btn-primary form-control">
+        ENVOYER
+      </button>
+
+    </div>
+  </div>
+</div>
